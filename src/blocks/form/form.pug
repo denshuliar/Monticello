@@ -1,0 +1,27 @@
+//-
+    name: form
+    description: Markup for the form block
+    arguments:
+        - {object} props - block properties
+
+mixin form(props = {})
+    .form&attributes(attributes)
+        .container
+            .row
+                .col-8.offset-2
+                    .form__block
+                        hr
+                        .form__start
+                            h2.form__title get in touch
+                        .form__end
+                            .form__info
+                                ul.form__list
+                                    li.form__item <i class="fas fa-map-marker-alt"></i> 91 Nolan Extensions Suite 670 
+                                    li.form__item <i class="fas fa-phone-alt"></i> +001 356-868-2454
+                                    li.form__item <i class="fas fa-inbox"></i> gahuy93@gmail.com
+                                    li.form__item <i class="far fa-clock"></i> From 07:05AM to 19:30PM
+                            .form__forms
+                                form(method="get").form__form
+                                    input#login(type="text", name="text" placeholder="Name Surname").form__login
+                                    input#email(type="email", name="email" placeholder="Email").form__email
+                                    button(type="submit").form__button submit           

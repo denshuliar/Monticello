@@ -1,0 +1,137 @@
+/**
+ * Styles for the footer block.
+ */
+.form {
+
+    // Selector styles
+    // TODO: add code
+    hr {
+        width: 100px;
+        height: 1px;
+        background-color: #2c4058;
+        border: none;
+    }
+
+    i {
+        color: #7e5aff;
+    }
+
+    // @media queries
+    // TODO: add code
+
+    // Pseudo-classes and pseudo-elements
+    // TODO: add code
+    &__login::placeholder {
+        opacity: 0.5;
+        color: #4b5562;
+        font-family: 'Gotham', sans-serif;
+        font-size: 18px;
+        font-weight: 300;
+        line-height: 22px;
+    }
+
+    &__email::placeholder {
+        opacity: 0.5;
+        color: #4b5562;
+        font-family: 'Gotham', sans-serif;
+        font-size: 18px;
+        font-weight: 300;
+        line-height: 22px;
+    }
+
+    &__email:focus {
+        border-bottom: 1px solid #2c4058;
+    }
+
+    &__login:focus {
+        border-bottom: 1px solid #2c4058;
+    }
+
+    // Nested selectors
+    // TODO: add code
+
+    // BEM elements
+    // TODO: add code
+    &__block {
+        background-color: white;
+        box-shadow: 0 -4px 30px rgba(133, 133, 133, 0.2);
+        padding: 62px 60px 82px;
+        margin-bottom: 56px;
+        background-image: url(../../img/form.png);
+        background-repeat: no-repeat;
+        background-position: bottom;
+        z-index: 4;
+    }
+
+    &__end {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    &__form {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+    }
+
+    &__login {
+        border: none;
+        color: #2c4058;
+        font-family: 'Gotham', sans-serif;
+        font-size: 18px;
+        font-weight: 300;
+        line-height: 22px;
+        border-bottom: 1px solid rgba(44, 64, 88, 0.2);
+        outline: none;
+        padding-bottom: 5px;
+        margin-bottom: 18px;
+    }
+
+    &__email {
+        border: none;
+        color: #2c4058;
+        font-family: 'Gotham', sans-serif;
+        font-size: 18px;
+        font-weight: 300;
+        line-height: 22px;
+        outline: none;
+        border-bottom: 1px solid rgba(44, 64, 88, 0.2);
+        padding-bottom: 5px 5px;
+        margin-bottom: 18px;
+    }
+
+    &__button {
+        width: 140px;
+        height: 50px;
+        border: 1px solid #2c4058;
+        color: #2c4058;
+        font-family: 'Gotham', sans-serif;
+        font-size: 14px;
+        font-weight: 300;
+        text-transform: uppercase;
+        background: transparent;
+    }
+
+    &__title {
+        color: #2c4058;
+        font-family: 'Gotham', sans-serif;
+        font-size: 44px;
+        font-weight: 500;
+        line-height: 1;
+        text-transform: uppercase;
+        text-align: center;
+        padding-top: 30px;
+        padding-bottom: 62px;
+    }
+
+    &__item {
+        color: #2c4058;
+        font-family: 'Gotham', sans-serif;
+        font-weight: 300;
+        font-size: 18px;
+        line-height: 34px;
+    }
+
+    // BEM modifiers
+    // TODO: add code
+}

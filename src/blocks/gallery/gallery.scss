@@ -1,0 +1,57 @@
+/**
+ * Styles for the gallery block.
+ */
+.gallery {
+
+    // Selector styles
+    // TODO: add code
+    hr {
+        margin-top: 140px;
+        width: 100px;
+        height: 1px;
+        background-color: #2c4058;
+        border: none;
+    }
+
+    // @media queries
+    // TODO: add code
+
+    // Pseudo-classes and pseudo-elements
+    // TODO: add code
+
+    // Nested selectors
+    // TODO: add code
+
+    // BEM elements
+    // TODO: add code
+    &__title {
+        color: #2c4058;
+        font-family: 'Gotham', sans-serif;
+        font-size: 44px;
+        font-weight: 500;
+        line-height: 1;
+        text-transform: uppercase;
+        text-align: center;
+        padding-top: 42px;
+        padding-bottom: 102px;
+    }
+
+    &__button {
+        color: #2c4058;
+        font-family: 'Gotham', sans-serif;
+        font-size: 14px;
+        font-weight: 300;
+        text-transform: uppercase;
+        width: 190px;
+        height: 50px;
+        border: 1px solid #2c4058;
+        background: transparent;
+        display: flex;
+        justify-content: center;
+        margin: 60px auto 140px;
+        outline: none;
+    }
+
+    // BEM modifiers
+    // TODO: add code
+}

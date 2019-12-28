@@ -1,0 +1,109 @@
+//-
+    name: news
+    description: Markup for the news block
+    arguments:
+        - {object} props - block properties
+
+mixin news(props = {})
+    .news&attributes(attributes)
+        .container
+            .news__bac
+                hr
+                .news__start
+                    h2.news__title latest news
+                .swiper-container.news__sli
+                    .swiper-wrapper
+                        .swiper-slide 
+                            .news__block
+                                .news__img
+                                    img(src="img/latest1.png", alt="news")
+                                .news__main
+                                    h3.news__name See The Unmatched Beauty Of The Great.
+                                    p.news__subname Free directories: directories are perfect for
+                                .news__end
+                                    .news__logo
+                                        img(src="img/latest_logo1.png", alt="logo")
+                                    .news__info
+                                        h4.news__author Isaac Dunn
+                                        span.news__time 09 Feb 2017
+                        .swiper-slide 
+                            .news__block
+                                .news__img
+                                    img(src="img/latest2.png", alt="news")
+                                .news__main
+                                    h3.news__name Effective Advertising Pointers.
+                                    p.news__subname Having a home based business is a wonderful asset to your life...
+                                .news__end
+                                    .news__logo
+                                        img(src="img/latest_logo2.png", alt="logo")
+                                    .news__info
+                                        h4.news__author Dominic Freeman
+                                        span.news__time 24 Apr 2017
+                        .swiper-slide 
+                            .news__block
+                                .news__img
+                                    img(src="img/latest3.png", alt="news")
+                                .news__main
+                                    h3.news__name Hypnotize Yourself Into The Ghost.
+                                    p.news__subname There are many things that are important to catalog design.... 
+                                .news__end
+                                    .news__logo
+                                        img(src="img/latest_logo3.png", alt="logo")
+                                    .news__info
+                                        h4.news__author Alice Ward
+                                        span.news__time 30 Dec 2017
+                        .swiper-slide 
+                            .news__block
+                                .news__img
+                                    img(src="img/latest1.png", alt="news")
+                                .news__main
+                                    h3.news__name See The Unmatched Beauty Of The Great.
+                                    p.news__subname Free directories: directories are perfect for
+                                .news__end
+                                    .news__logo
+                                        img(src="img/latest_logo1.png", alt="logo")
+                                    .news__info
+                                        h4.news__author Isaac Dunn
+                                        span.news__time 09 Feb 2017
+                        .swiper-slide
+                            .news__block
+                                .news__img
+                                    img(src="img/latest2.png", alt="news")
+                                .news__main
+                                    h3.news__name Effective Advertising Pointers.
+                                    p.news__subname Having a home based business is a wonderful asset to your life...
+                                .news__end
+                                    .news__logo
+                                        img(src="img/latest_logo2.png", alt="logo")
+                                    .news__info
+                                        h4.news__author Dominic Freeman
+                                        span.news__time 24 Apr 2017
+                        .swiper-slide 
+                            .news__block
+                                .news__img
+                                    img(src="img/latest3.png", alt="news")
+                                .news__main
+                                    h3.news__name Hypnotize Yourself Into The Ghost.
+                                    p.news__subname There are many things that are important to catalog design.... 
+                                .news__end
+                                    .news__logo
+                                        img(src="img/latest_logo3.png", alt="logo")
+                                    .news__info
+                                        h4.news__author Alice Ward
+                                        span.news__time 30 Dec 2017
+                        .swiper-slide 
+                            .news__block
+                                .news__img
+                                    img(src="img/latest1.png", alt="news")
+                                .news__main
+                                    h3.news__name See The Unmatched Beauty Of The Great.
+                                    p.news__subname Free directories: directories are perfect for
+                                .news__end
+                                    .news__logo
+                                        img(src="img/latest_logo1.png", alt="logo")
+                                    .news__info
+                                        h4.news__author Isaac Dunn
+                                        span.news__time 09 Feb 2017
+                    .swiper-pagination
+                    .swiper-button-next
+                    .swiper-button-prev

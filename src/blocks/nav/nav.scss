@@ -1,0 +1,81 @@
+/**
+ * Styles for the nav block.
+ */
+.nav {
+    // Selector styles
+    // TODO: add code
+    background-color: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    z-index: 10;
+    padding: 20px 15px 10px 15px;
+
+    i {
+        color: white;
+        font-size: 16px;
+    }
+
+    // @media queries
+    // TODO: add code
+
+    // Pseudo-classes and pseudo-elements
+    // TODO: add code
+
+
+    // Nested selectors
+    // TODO: add code
+
+    // BEM elements
+    // TODO: add code
+    &__logo {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__block {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__list {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        text-transform: uppercase;
+    }
+
+    &__item {
+        margin: 0 42px;
+        font-size: 14px;
+        font-weight: 300;
+        line-height: 22px;
+        text-transform: uppercase;
+        color: white;
+    }
+
+    &__link {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__el {
+        border-radius: 50%;
+        border: 1px solid rgba($color: white, $alpha: .4);
+        width: 40px;
+        height: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-left: 24px;
+    }
+
+    // BEM modifiers
+    // TODO: add code
+
+}

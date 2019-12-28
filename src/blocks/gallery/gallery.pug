@@ -1,0 +1,33 @@
+//-
+    name: gallery
+    description: Markup for the gallery block
+    arguments:
+        - {object} props - block properties
+
+mixin gallery(props = {})
+    .gallery&attributes(attributes)
+        .container
+            hr
+            .gallery__start
+                h2.gallery__title Gallery
+            .row
+                .col-6
+                    .gallery__img
+                    img(src="img/gallery1.png", alt="")   
+                .col-6
+                    .row
+                        .col-6
+                            .gallery__img
+                                img(src="img/gallery2.png", alt="")
+                        .col-6
+                            .gallery__img
+                                img(src="img/gallery3.png", alt="")
+                    .row
+                        col-6
+                            .gallery__img
+                                img(src="img/gallery4.png", alt="")
+                        col-6
+                            .gallery__img
+                                img(src="img/gallery5.png", alt="")
+            button(type="submit").gallery__button see more
+
