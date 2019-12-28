@@ -1,6 +1,6 @@
 import Swiper from 'swiper';
 
-export function initBlock() {
+export default function () {
     // TODO: add code here
     new Swiper('.header__sl', {
         direction: 'vertical',
@@ -11,7 +11,4 @@ export function initBlock() {
         }
     });
 }
-
-export default initBlock();
-
 // ---------------------------- END PUBLIC METHODS ----------------------------

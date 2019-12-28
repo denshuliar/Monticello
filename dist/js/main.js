@@ -9343,7 +9343,7 @@ function initPage() {
   window.addEventListener('scroll', throttledWindowScroll);
   _js_util_lazy_loader__WEBPACK_IMPORTED_MODULE_1__["init"](); // TODO: initialize other blocks
 
-  _header_header__WEBPACK_IMPORTED_MODULE_2__["default"].initBlock(); // Process the initial window size and scroll position
+  Object(_header_header__WEBPACK_IMPORTED_MODULE_2__["default"])(); // Process the initial window size and scroll position
 
   handleWindowResize();
   handleWindowScroll();
@@ -9355,15 +9355,14 @@ function initPage() {
 /*!*************************************!*\
   !*** ./src/blocks/header/header.js ***!
   \*************************************/
-/*! exports provided: initBlock, default */
+/*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "initBlock", function() { return initBlock; });
 /* harmony import */ var swiper__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! swiper */ "./node_modules/swiper/js/swiper.esm.bundle.js");
 
-function initBlock() {
+/* harmony default export */ __webpack_exports__["default"] = (function () {
   // TODO: add code here
   new swiper__WEBPACK_IMPORTED_MODULE_0__["default"]('.header__sl', {
     direction: 'vertical',
@@ -9373,8 +9372,7 @@ function initBlock() {
       el: '.swiper-pagination'
     }
   });
-}
-/* harmony default export */ __webpack_exports__["default"] = (initBlock()); // ---------------------------- END PUBLIC METHODS ----------------------------
+}); // ---------------------------- END PUBLIC METHODS ----------------------------
 
 /***/ }),
 

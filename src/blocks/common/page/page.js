@@ -53,7 +53,7 @@ export function initPage() {
     LazyLoader.init();
 
     // TODO: initialize other blocks
-    header.initBlock();
+    header();
 
     // Process the initial window size and scroll position
     handleWindowResize();
