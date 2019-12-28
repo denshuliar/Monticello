@@ -1070,7 +1070,7 @@ svg4everybody__WEBPACK_IMPORTED_MODULE_0___default()();
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! D:\Beetroot\Monticello\src\js\vendor.js */"./src/js/vendor.js");
+module.exports = __webpack_require__(/*! D:\Beetroot\MonticelloMain\Monticello\src\js\vendor.js */"./src/js/vendor.js");
 
 
 /***/ })

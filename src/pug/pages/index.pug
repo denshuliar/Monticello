@@ -1,6 +1,13 @@
 extends ../layouts/base.pug
 
 //- TODO: include page-specific block templates
-
+include ../../blocks/nav/nav.pug
+include ../../blocks/header/header.pug
+include ../../blocks/main/main.pug
+include ../../blocks/gallery/gallery.pug
 block page
     //- TODO: add code
+    +nav
+    +header
+    +main
+    +gallery

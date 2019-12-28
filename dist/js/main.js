@@ -9292,12 +9292,12 @@ Swiper.use(components);
 /*!****************************************!*\
   !*** ./src/blocks/common/page/page.js ***!
   \****************************************/
-/*! exports provided: initBlock */
+/*! exports provided: initPage */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "initBlock", function() { return initBlock; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "initPage", function() { return initPage; });
 /* harmony import */ var _js_util_index__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../js/util/index */ "./src/js/util/index.js");
 /* harmony import */ var _js_util_lazy_loader__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../js/util/lazy-loader */ "./src/js/util/lazy-loader.js");
 /* harmony import */ var _header_header__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../header/header */ "./src/blocks/header/header.js");
@@ -9336,14 +9336,14 @@ function handleWindowResize() {} // TODO: add code
  */
 
 
-function initBlock() {
+function initPage() {
   var debouncedWindowResize = Object(_js_util_index__WEBPACK_IMPORTED_MODULE_0__["debounce"])(handleWindowResize, RESIZE_INTERVAL);
   var throttledWindowScroll = Object(_js_util_index__WEBPACK_IMPORTED_MODULE_0__["throttle"])(handleWindowScroll, SCROLL_INTERVAL);
   window.addEventListener('resize', debouncedWindowResize);
   window.addEventListener('scroll', throttledWindowScroll);
   _js_util_lazy_loader__WEBPACK_IMPORTED_MODULE_1__["init"](); // TODO: initialize other blocks
 
-  _header_header__WEBPACK_IMPORTED_MODULE_2__["initBlock"](); // Process the initial window size and scroll position
+  _header_header__WEBPACK_IMPORTED_MODULE_2__["default"].initBlock(); // Process the initial window size and scroll position
 
   handleWindowResize();
   handleWindowScroll();
@@ -9363,15 +9363,16 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "initBlock", function() { return initBlock; });
 /* harmony import */ var swiper__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! swiper */ "./node_modules/swiper/js/swiper.esm.bundle.js");
 
-function initBlock() {// TODO: add code here
-  // new Swiper(".header__sl", {
-  //     direction: 'vertical',
-  //     loop: true,
-  //     clickable: true,
-  //     pagination: {
-  //         el: '.swiper-pagination',
-  //     }
-  // });
+function initBlock() {
+  // TODO: add code here
+  new swiper__WEBPACK_IMPORTED_MODULE_0__["default"]('.header__sl', {
+    direction: 'vertical',
+    loop: true,
+    clickable: true,
+    pagination: {
+      el: '.swiper-pagination'
+    }
+  });
 }
 /* harmony default export */ __webpack_exports__["default"] = (initBlock()); // ---------------------------- END PUBLIC METHODS ----------------------------
 
@@ -9387,9 +9388,8 @@ function initBlock() {// TODO: add code here
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _blocks_common_page_page__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../blocks/common/page/page */ "./src/blocks/common/page/page.js");
- // The page block is responsible for initialization of all other blocks
 
-Object(_blocks_common_page_page__WEBPACK_IMPORTED_MODULE_0__["initBlock"])();
+Object(_blocks_common_page_page__WEBPACK_IMPORTED_MODULE_0__["initPage"])();
 
 /***/ }),
 
@@ -9716,7 +9716,7 @@ function addImage(img) {
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! D:\Beetroot\Monticello\src\js\main.js */"./src/js/main.js");
+module.exports = __webpack_require__(/*! D:\Beetroot\MonticelloMain\Monticello\src\js\main.js */"./src/js/main.js");
 
 
 /***/ })

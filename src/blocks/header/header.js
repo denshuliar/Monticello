@@ -1,15 +1,15 @@
-import "swiper";
+import Swiper from 'swiper';
 
 export function initBlock() {
     // TODO: add code here
-    // new Swiper(".header__sl", {
-    //     direction: 'vertical',
-    //     loop: true,
-    //     clickable: true,
-    //     pagination: {
-    //         el: '.swiper-pagination',
-    //     }
-    // });
+    new Swiper('.header__sl', {
+        direction: 'vertical',
+        loop: true,
+        clickable: true,
+        pagination: {
+            el: '.swiper-pagination',
+        }
+    });
 }
 
 export default initBlock();

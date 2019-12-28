@@ -3,7 +3,7 @@
  */
 
 const matches =
-    Element.prototype.matches || 
+    Element.prototype.matches ||
     Element.prototype.mozMatchesSelector ||
     Element.prototype.msMatchesSelector ||
     Element.prototype.oMatchesSelector ||
@@ -50,17 +50,17 @@ export function forceReflow(el) {
  */
 export function getTransitionDuration(el) {
     const style = getComputedStyle(el);
-    
+
     const duration = style.transitionDuration || '';
     const delay = style.transitionDelay || '';
-    
+
     if (!duration && !delay) {
         return 0;
     }
-    
+
     const floatDuration = parseFloat(duration.split(','));
     const floatDelay = parseFloat(delay.split(','));
-    
+
     const msDuration = (floatDuration + floatDelay) * 1000;
     return isNaN(msDuration) ? 0 : msDuration;
 }
@@ -73,9 +73,9 @@ export function getTransitionDuration(el) {
  */
 export function detectTransitionEnd(el) {
     const duration = getTransitionDuration(el);
-    
+
     let handleTransitionEnd;
-    
+
     return new Promise((resolve) => {
         handleTransitionEnd = (e) => {
             if (e.target === el) {
@@ -83,7 +83,7 @@ export function detectTransitionEnd(el) {
             }
         };
         el.addEventListener('transitionend', handleTransitionEnd, false);
-      
+
         // In case the 'transitionend' event is not supported, or is somehow
         // lost, or there is no transition property defined, setup a timer to 
         // resolve the promise after the given duration
@@ -100,9 +100,9 @@ export function detectTransitionEnd(el) {
  * @param {number} duration Animation duration in milliseconds
  */
 export function animate(cb, duration) {
-    const startTime = ('now' in window.performance)
-        ? window.performance.now()
-        : new Date().getTime();
+    const startTime = ('now' in window.performance) ?
+        window.performance.now() :
+        new Date().getTime();
 
     requestAnimationFrame(function step(currentTime) {
         const deltaTime = currentTime - startTime;
@@ -164,7 +164,7 @@ export function scrollTo(target, duration) {
 export function debounce(cb, interval) {
     let timer = null;
 
-    return function() {
+    return function () {
         clearTimeout(timer);
         timer = setTimeout(cb, interval);
     };
@@ -181,7 +181,7 @@ export function throttle(cb, interval) {
     let called = false;
     let timer = null;
 
-    return function() {
+    return function () {
         if (timer !== null) {
             // Ensure that we catch and execute that last invocation.
             called = true;
@@ -190,7 +190,7 @@ export function throttle(cb, interval) {
 
         cb();
 
-        timer = this.setTimeout(function() {
+        timer = this.setTimeout(function () {
             timer = null;
             if (called) {
                 cb();
