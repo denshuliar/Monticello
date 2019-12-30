@@ -9,7 +9,8 @@ import {
 import * as LazyLoader from '../../../js/util/lazy-loader';
 
 // TODO: import other blocks
-import header from '../../header/header';
+import * as header from '../../header/header';
+import * as news from '../../news/news';
 
 // -------------------------- BEGIN MODULE VARIABLES --------------------------
 
@@ -43,7 +44,7 @@ function handleWindowResize() {
 /**
  * Initialize the page block.
  */
-export function initPage() {
+export function initBlock() {
     const debouncedWindowResize = debounce(handleWindowResize, RESIZE_INTERVAL);
     const throttledWindowScroll = throttle(handleWindowScroll, SCROLL_INTERVAL);
 
@@ -53,10 +54,12 @@ export function initPage() {
     LazyLoader.init();
 
     // TODO: initialize other blocks
-    header();
+    header.initBlock();
+    news.initBlock();
 
     // Process the initial window size and scroll position
     handleWindowResize();
     handleWindowScroll();
 }
+
 // ---------------------------- END PUBLIC METHODS ----------------------------

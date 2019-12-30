@@ -9292,20 +9292,22 @@ Swiper.use(components);
 /*!****************************************!*\
   !*** ./src/blocks/common/page/page.js ***!
   \****************************************/
-/*! exports provided: initPage */
+/*! exports provided: initBlock */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "initPage", function() { return initPage; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "initBlock", function() { return initBlock; });
 /* harmony import */ var _js_util_index__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../js/util/index */ "./src/js/util/index.js");
 /* harmony import */ var _js_util_lazy_loader__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../js/util/lazy-loader */ "./src/js/util/lazy-loader.js");
 /* harmony import */ var _header_header__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../header/header */ "./src/blocks/header/header.js");
+/* harmony import */ var _news_news__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../news/news */ "./src/blocks/news/news.js");
 /**
  * @file Implementation of the page block
  */
 
  // TODO: import other blocks
+
 
  // -------------------------- BEGIN MODULE VARIABLES --------------------------
 
@@ -9336,14 +9338,15 @@ function handleWindowResize() {} // TODO: add code
  */
 
 
-function initPage() {
+function initBlock() {
   var debouncedWindowResize = Object(_js_util_index__WEBPACK_IMPORTED_MODULE_0__["debounce"])(handleWindowResize, RESIZE_INTERVAL);
   var throttledWindowScroll = Object(_js_util_index__WEBPACK_IMPORTED_MODULE_0__["throttle"])(handleWindowScroll, SCROLL_INTERVAL);
   window.addEventListener('resize', debouncedWindowResize);
   window.addEventListener('scroll', throttledWindowScroll);
   _js_util_lazy_loader__WEBPACK_IMPORTED_MODULE_1__["init"](); // TODO: initialize other blocks
 
-  Object(_header_header__WEBPACK_IMPORTED_MODULE_2__["default"])(); // Process the initial window size and scroll position
+  _header_header__WEBPACK_IMPORTED_MODULE_2__["initBlock"]();
+  _news_news__WEBPACK_IMPORTED_MODULE_3__["initBlock"](); // Process the initial window size and scroll position
 
   handleWindowResize();
   handleWindowScroll();
@@ -9355,24 +9358,80 @@ function initPage() {
 /*!*************************************!*\
   !*** ./src/blocks/header/header.js ***!
   \*************************************/
-/*! exports provided: default */
+/*! exports provided: initBlock, default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "initBlock", function() { return initBlock; });
 /* harmony import */ var swiper__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! swiper */ "./node_modules/swiper/js/swiper.esm.bundle.js");
 
-/* harmony default export */ __webpack_exports__["default"] = (function () {
+function initBlock() {
   // TODO: add code here
-  new swiper__WEBPACK_IMPORTED_MODULE_0__["default"]('.header__sl', {
+  new swiper__WEBPACK_IMPORTED_MODULE_0__["default"](".header__sl", {
     direction: 'vertical',
     loop: true,
-    clickable: true,
     pagination: {
+      clickable: true,
       el: '.swiper-pagination'
     }
   });
-}); // ---------------------------- END PUBLIC METHODS ----------------------------
+}
+/* harmony default export */ __webpack_exports__["default"] = (initBlock()); // ---------------------------- END PUBLIC METHODS ----------------------------
+
+/***/ }),
+
+/***/ "./src/blocks/news/news.js":
+/*!*********************************!*\
+  !*** ./src/blocks/news/news.js ***!
+  \*********************************/
+/*! exports provided: initBlock, default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "initBlock", function() { return initBlock; });
+/* harmony import */ var swiper__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! swiper */ "./node_modules/swiper/js/swiper.esm.bundle.js");
+/**
+ * @file Implementation of the news block
+ */
+ // -------------------------- BEGIN MODULE VARIABLES --------------------------
+// TODO: add code here
+// --------------------------- END MODULE VARIABLES ---------------------------
+// -------------------------- BEGIN UTILITY FUNCTIONS -------------------------
+// TODO: add code here
+// --------------------------- END UTILITY FUNCTIONS --------------------------
+// ----------------------------- BEGIN DOM METHODS ----------------------------
+// TODO: add code here
+// ------------------------------ END DOM METHODS -----------------------------
+// --------------------------- BEGIN EVENT HANDLERS ---------------------------
+// TODO: add code here
+// ---------------------------- END EVENT HANDLERS ----------------------------
+// --------------------------- BEGIN PUBLIC METHODS ---------------------------
+
+/**
+ * Initialize the news block.
+ * @return true if the block is present on the page, false otherwise
+ */
+
+function initBlock() {
+  new swiper__WEBPACK_IMPORTED_MODULE_0__["default"](".news__sli", {
+    slidesPerView: 3,
+    spaceBetween: 30,
+    loop: true,
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true
+    },
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev'
+    }
+  }); // TODO: add code here
+
+  return true;
+}
+/* harmony default export */ __webpack_exports__["default"] = (initBlock()); // ---------------------------- END PUBLIC METHODS ----------------------------
 
 /***/ }),
 
@@ -9386,8 +9445,9 @@ __webpack_require__.r(__webpack_exports__);
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _blocks_common_page_page__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../blocks/common/page/page */ "./src/blocks/common/page/page.js");
+ // The page block is responsible for initialization of all other blocks
 
-Object(_blocks_common_page_page__WEBPACK_IMPORTED_MODULE_0__["initPage"])();
+Object(_blocks_common_page_page__WEBPACK_IMPORTED_MODULE_0__["initBlock"])();
 
 /***/ }),
 

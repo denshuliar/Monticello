@@ -2,7 +2,8 @@
 * Styles for the main block.
 */
 .main {
-
+    overflow: hidden;
+    max-width: 100%;
     // Selector styles
     // TODO: add code
 
@@ -17,6 +18,31 @@
         border-right: none;
         color: white;
         transition: 0.3s ease;
+    }
+
+    &__img:before {
+        content: '';
+        display: block;
+        background-color: #55b7ff;
+        position: absolute;
+        transform: translate(-40%, -20%);
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 80%;
+    }
+
+    &__img2:before {
+        content: '';
+        display: block;
+        background-color: #7e5aff;
+        position: absolute;
+        transform: translate(40%, -20%);
+
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 80%;
     }
 
 
@@ -44,6 +70,10 @@
         font-size: 1;
         font-weight: 300;
         padding-top: 60px;
+    }
+
+    &__block {
+        padding-bottom: 140px;
     }
 
     &__name {
@@ -84,6 +114,12 @@
         font-style: italic;
         padding-top: 42px;
     }
+
+    &__logo {
+        z-index: 100;
+        position: relative;
+    }
+
 
 
 
