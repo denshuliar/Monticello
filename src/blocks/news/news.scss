@@ -2,8 +2,17 @@
 * Styles for the news block.
 */
 .news {
-    background-repeat: no-repeat;
-    background-image: linear-gradient(45deg, #3c7fd4 0%, #24ccfa 100%);
+
+    &::before {
+        content: " ";
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        pointer-events: none;
+        z-index: 1;
+        bottom: 0;
+        left: 0;
+    }
 
     background: #eee;
     font-size: 14px;
@@ -13,39 +22,131 @@
     position: relative;
 
 
+
     .swiper-container {
+        overflow: hidden;
+        max-width: 1170px;
+        max-height: 520px;
         width: 100%;
         height: 100%;
+        margin-bottom: 58px;
+        position: relative;
+
+        @media screen and (max-width: 1199px) {
+            max-width: 100%;
+            max-height: 100%;
+            padding: 0 25px;
+        }
+
+        @media screen and (max-width: 991px) {
+            max-width: 95%;
+            padding: 0 0 0 88px;
+        }
+
+        @media screen and (max-width: 767px) {
+            max-width: 90%;
+            padding: 0px 0px 0 0px;
+        }
+
+        @media screen and (max-width: 575px) {
+            max-width: 90%;
+            padding: 0 10px;
+        }
+
     }
 
     .swiper-slide {
-        text-align: center;
-        font-size: 18px;
-        background: #fff;
+        transition: box-shadow .3s;
+        max-width: 370px;
+        height: 514px;
+        max-height: 100%;
+        background-color: #fff;
+
+        &:hover {
+            cursor: pointer;
+            box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.5);
+        }
     }
 
-    .swiper-button-next,
     .swiper-button-prev {
-        color: black;
-        border-radius: 50%;
-        border: 1px solid white;
         width: 40px;
         height: 40px;
-        z-index: 10;
+        opacity: 0.5;
+        border-radius: 50%;
+        border: 1px solid white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
         position: absolute;
-        top: 0;
-    }
+        left: 116px;
+        bottom: 445px;
+        z-index: 2;
+        outline: none;
 
-    .swiper-button-prev {
-        top: 50%;
-        left: 0;
-        z-index: 10;
+        @media screen and (max-width: 1599px) {
+            width: 60px;
+            height: 60px;
+            border: 1px solid #fff;
+            background-color: #fff;
+            left: 50px;
+        }
+
+        @media screen and (max-width: 767px) {
+            display: none;
+        }
+
+        &:hover {
+            cursor: pointer;
+            opacity: 1;
+        }
     }
 
     .swiper-button-next {
-        top: 50%;
-        right: 0;
-        z-index: 10;
+        width: 40px;
+        height: 40px;
+        opacity: 0.5;
+        border-radius: 50%;
+        border: 1px solid white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        right: 114px;
+        bottom: 445px;
+        z-index: 2;
+        outline: none;
+
+        @media screen and (max-width: 1599px) {
+            right: 52px;
+            width: 60px;
+            height: 60px;
+            border: 1px solid #fff;
+            background-color: #fff;
+        }
+
+        @media screen and (max-width: 767px) {
+            display: none;
+        }
+
+        &:hover {
+            cursor: pointer;
+            opacity: 1;
+        }
+    }
+
+    hr {
+        max-width: 100px;
+        color: #fff;
+        margin-bottom: 34px;
+
+    }
+
+    .swiper-pagination {
+        margin: 0 auto;
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        max-width: 203px;
     }
 
     // Selector styles
@@ -62,10 +163,31 @@
 
     // BEM elements
     // TODO: add code
-    &__bac {
-        background-image: url(../../img/news_bac.png);
-        z-index: 2;
+    &__title {
+        text-align: center;
+        font-family: 'Gotham', sans-serif;
+        color: #fff;
+        font-size: 44px;
+        font-weight: 500;
+        text-transform: uppercase;
+        margin-bottom: 95px;
 
+        @media screen and (max-width: 1199px) {
+            margin-bottom: 75px;
+        }
+
+        @media screen and (max-width: 575px) {
+            margin-bottom: 50px;
+            font-size: 35px;
+        }
+    }
+
+    &__start {
+        padding-top: 128px;
+
+        @media screen and (max-width: 1199px) {
+            padding-top: 50px;
+        }
     }
 
     &__block {
@@ -75,20 +197,112 @@
     }
 
     &__name {
+        padding-top: 22px;
         color: #2c4058;
         font-family: 'Gotham', sans-serif;
         font-size: 22px;
         font-weight: 700;
-        line-height: 34px;
         text-transform: uppercase;
-        text-align: left;
+        margin-bottom: 6px;
+        line-height: 33px;
+        letter-spacing: 0.3px;
+        padding-right: 17px;
+
+        @media screen and (max-width: 1199px) {
+            padding-right: 3px;
+        }
+
+        @media screen and (max-width: 767px) {
+            padding-top: 10px;
+            padding-bottom: 20px;
+        }
+    }
+
+    &__subname {
+        color: #4b5562;
+        font-family: 'Open Sans', sans-serif;
+        font-size: 18px;
+        font-weight: 400;
+        padding-right: 21px;
+        line-height: 29px;
+        letter-spacing: -0.1px;
+        height: 100%;
+        max-height: 90px;
+        box-sizing: border-box;
+
+        @media screen and (max-width: 767px) {
+            margin-bottom: 20px;
+        }
     }
 
     &__bac {
         background-color: white;
         background-image: linear-gradient(45deg, #3c7fd4 0%, #24ccfa 100%);
+
+        &::before {
+            background-image: url(../../img/news_bac.png);
+            z-index: 100;
+            content: '';
+        }
+
     }
 
-    // BEM modifiers
-    // TODO: add code
+    &__info {
+        margin-left: 19px;
+    }
+
+    &__author {
+        color: #2c4058;
+        font-family: 'Gotham', sans-serif;
+        font-size: 18px;
+        font-weight: 300;
+        text-transform: uppercase;
+        margin-bottom: 8px;
+    }
+
+    &__time {
+        color: #55b7ff;
+        font-family: 'Gotham', sans-serif;
+        font-size: 14px;
+        font-weight: 300;
+    }
+
+    &__arrow {
+        font-size: 14px;
+        color: #000;
+
+        @media screen and (max-width: 1599px) {
+            color: #000;
+            font-size: 30px;
+        }
+    }
+
+    &__utilities {
+        padding-bottom: 141px;
+
+        @media screen and (max-width: 767px) {
+            padding-bottom: 100px;
+
+        }
+
+        @media screen and (max-width: 575px) {
+            padding-bottom: 50px;
+        }
+
+
+    }
+
+    &__main {
+        padding-left: 20px;
+    }
+
+    &__end {
+        display: flex;
+        align-items: flex-end;
+        padding-top: 36px;
+        padding-left: 20px;
+    }
 }
+
+// BEM modifiers
+// TODO: add code

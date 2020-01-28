@@ -11,6 +11,7 @@ import * as LazyLoader from '../../../js/util/lazy-loader';
 // TODO: import other blocks
 import * as header from '../../header/header';
 import * as news from '../../news/news';
+import * as map from '../../map/map';
 
 // -------------------------- BEGIN MODULE VARIABLES --------------------------
 

@@ -1,22 +1,45 @@
 /**
  * Styles for the map block.
  */
-.map {
-    // Selector styles
-    // TODO: add code
-
-    // @media queries
-    // TODO: add code
-
-    // Pseudo-classes and pseudo-elements
-    // TODO: add code
-
-    // Nested selectors
-    // TODO: add code
-
-    // BEM elements
-    // TODO: add code
-
-    // BEM modifiers
-    // TODO: add code
+#map {
+    height: 700px;
+    width: 100%;
 }
+
+@media screen and (max-width: 991px) {
+    #map {
+        height: 500px;
+    }
+
+}
+
+@media screen and (max-width: 767px) {
+    #map {
+        height: 350px;
+    }
+
+}
+
+@media screen and (max-width: 575px) {
+    #map {
+        height: 250px;
+    }
+}
+
+// Selector styles
+// TODO: add code
+
+// @media queries
+// TODO: add code
+
+// Pseudo-classes and pseudo-elements
+// TODO: add code
+
+// Nested selectors
+// TODO: add code
+
+// BEM elements
+// TODO: add code
+
+// BEM modifiers
+// TODO: add code
