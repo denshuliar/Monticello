@@ -52,11 +52,16 @@
         justify-content: center;
         margin: 60px auto 140px;
         outline: none;
+
+        &:hover {
+            background: #2c4058;
+            color: white;
+            transition: 0.3s ease all;
+        }
     }
 
     &__img {
-        width: 100%;
-        height: 100%;
+        padding-bottom: 18px;
     }
 
     // BEM modifiers
